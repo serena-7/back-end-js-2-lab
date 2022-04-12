@@ -33,7 +33,7 @@ module.exports = {
             houses[index].price += 10000;
             res.status(200).send(houses);
         } else{
-            res.status(300).send('request failed')
+            res.status(400).send('request failed')
         }
     }
 }
