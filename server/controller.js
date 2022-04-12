@@ -26,7 +26,7 @@ module.exports = {
         const id = req.params.id;
         const type = req.body.type;
         const index = houses.findIndex(e => e.id === +id);
-        if(type === 'minus' && houses[index].price > 0){
+        if(type === 'minus' && houses[index].price >= 10000){
             houses[index].price -= 10000;
             res.status(200).send(houses);
         } else if(type === 'plus'){
